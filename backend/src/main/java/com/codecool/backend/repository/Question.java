@@ -16,6 +16,7 @@ public class Question {
     private long id;
     private String question;
     @OneToMany
+    @JoinColumn(name = "question_id")
     private List<Answer> answers;
     private LocalDateTime createdAt;
 }

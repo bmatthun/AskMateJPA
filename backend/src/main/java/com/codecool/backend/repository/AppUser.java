@@ -19,7 +19,9 @@ public class AppUser {
     private String password;
     private LocalDate registered;
     @OneToMany
+    @JoinColumn(name = "app_user_id")
     private List<Question> questions;
     @OneToMany
+    @JoinColumn(name = "app_user_id")
     private List<Answer> answers;
 }
