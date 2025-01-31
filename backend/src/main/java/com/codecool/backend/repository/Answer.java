@@ -18,7 +18,10 @@ public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private UUID publicId;
+
     private String content;
+
     private LocalDateTime createdAt;
 }

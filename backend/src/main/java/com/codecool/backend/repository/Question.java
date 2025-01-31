@@ -14,9 +14,12 @@ public class Question {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private String question;
+
     @OneToMany
     @JoinColumn(name = "question_id")
     private List<Answer> answers;
+
     private LocalDateTime createdAt;
 }

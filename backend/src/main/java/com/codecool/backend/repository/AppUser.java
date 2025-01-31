@@ -14,13 +14,19 @@ public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
     private UUID publicId;
+
     private String email;
+
     private String password;
+
     private LocalDate registered;
+
     @OneToMany
     @JoinColumn(name = "app_user_id")
     private List<Question> questions;
+
     @OneToMany
     @JoinColumn(name = "app_user_id")
     private List<Answer> answers;
